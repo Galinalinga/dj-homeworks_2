@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>РЕЦЕПТЫ</title>
+</head>
+<body>
+<ul style="color: green; font-size: 20px">
+<h1>{{ name_dish|capfirst }}</h1>
+    {% for ingredient, amount in recipe.items %}
+        <p><li>{{ ingredient }}: {{ amount }}</li></p>
+    {% empty %}
+
+    Такого рецепта не знаю :(
+
+    {% endfor %}
+</ul>
+</body>
+</html>
+
